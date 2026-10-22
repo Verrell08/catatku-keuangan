@@ -18,7 +18,7 @@
   --site-spacing-scale: 1;
   --site-radius-scale: 1;
   --site-decoration-opacity: 1;
-  color-scheme: light dark;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: var(--site-font-body); background: light-dark(#f4f7f5,#101815); color: light-dark(#17241f,#e9f1ed); }
@@ -82,7 +82,52 @@ td.amount { text-align:right;font-weight:750;white-space:nowrap; }
 .bottom-note { margin-top:18px;font-size:11px;color:light-dark(#7a887f,#9aaba1);line-height:1.6; }
 .toast {position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#182720;color:#fff;padding:12px 16px;border-radius:12px;font-size:13px;box-shadow:0 8px 30px #0002;display:none;z-index:10;max-width:90vw;}
 @media(max-width:850px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));}.layout{grid-template-columns:1fr;}.topbar{align-items:flex-start}.welcome{align-items:flex-start;flex-direction:column}.filters{grid-template-columns:1fr 1fr}.filters input:last-child{grid-column:span 2;}}
-@media(max-width:480px){main{padding:18px 12px 35px}.topbar{padding:16px 12px;flex-direction:column}.top-actions{width:100%}.top-actions button{flex:1}.panel{padding:15px}.stats{gap:9px}.stat{padding:13px}.stat-top{font-size:11px}.two{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.table-head{flex-direction:column}.date-pill{white-space:normal}}
+@media 
+/* Perbaikan warna teks dan kotak */
+body {
+  background: #f4f7f5 !important;
+  color: #17241f !important;
+}
+
+#app, .panel, .stat {
+  background: #ffffff !important;
+  color: #17241f !important;
+}
+
+input,
+select,
+textarea,
+.field input,
+.field select,
+.field textarea,
+.filters input,
+.filters select {
+  background-color: #ffffff !important;
+  color: #17241f !important;
+  -webkit-text-fill-color: #17241f !important;
+  color-scheme: light !important;
+  border-color: #dfe7e1 !important;
+}
+
+.field label,
+.sub,
+.welcome p,
+.stat-top,
+.stat small,
+th,
+.meta,
+.empty,
+.table-footer,
+.bottom-note {
+  color: #526158 !important;
+}
+
+.type-option,
+.mini {
+  background: #ffffff !important;
+  color: #17241f !important;
+}
+ (max-width:480px){main{padding:18px 12px 35px}.topbar{padding:16px 12px;flex-direction:column}.top-actions{width:100%}.top-actions button{flex:1}.panel{padding:15px}.stats{gap:9px}.stat{padding:13px}.stat-top{font-size:11px}.two{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.table-head{flex-direction:column}.date-pill{white-space:normal}}
 </style>
 </head>
 <body>
